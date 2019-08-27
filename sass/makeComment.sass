@@ -1,0 +1,252 @@
+.rf-make_comment-wrapper
+  position: absolute
+  bottom: 0
+  z-index: 2
+
+  display: none
+
+  max-width: 830px
+
+  background: rgb(245,127,79)
+  background: -moz-linear-gradient(180deg, rgba(245,127,79,1) 0%, rgba(245,161,109,1) 50%, rgba(245,197,141,1) 100%)
+  background: -webkit-linear-gradient(180deg, rgba(245,127,79,1) 0%, rgba(245,161,109,1) 50%, rgba(245,197,141,1) 100%)
+  background: linear-gradient(180deg, rgba(245,127,79,1) 0%, rgba(245,161,109,1) 50%, rgba(245,197,141,1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f57f4f",endColorstr="#f5c58d",GradientType=1)
+
+.make-comment
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+  grid-row-gap: 25px
+  justify-content: center
+
+  padding: 40px 20px
+  margin: 40px 20px
+
+  background: white
+
+// close button
+
+.mc-close
+  position: absolute
+  top: 55px
+  right: 35px
+
+  width: 15px
+  height: 15px
+
+  img
+    width: 15px
+    height: 15px
+
+.mc-header
+  font-family: "aglettericacondensedc-bold", sans-serif
+  font-size: 1.5em
+  color: black
+
+.mc-inner_header
+  font-weight: bold
+
+.mc-block-underwrapper
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+  grid-row-gap: 20px
+
+.mc-block-wrapper
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+  grid-row-gap: 20px
+
+// rating stars
+
+.mc-star_rating
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+  grid-row-gap: 10px
+
+.sr-imgs
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+
+  flex-direction: row-reverse
+  justify-content: flex-end
+
+.sr-imgs input[type="radio"]
+  display: none
+
+.sr-star_img
+  display: block
+
+  width: 25px
+  height: 25px
+  margin-right: 15px
+
+  cursor: pointer
+  background: url(../i/non-filled-star.svg) no-repeat center
+
+  transition: background ease 0.1s
+
+.sr-star_img:hover,
+.sr-star_img:hover ~ .sr-star_img,
+.sr-imgs input[type="radio"]:checked ~ .sr-star_img
+  background: url("../i/filled-star.svg")
+
+// comment-self
+
+.mc-two_words
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+  grid-template-rows: 25px 50px
+  grid-row-gap: 10px
+
+.mc-in_detail
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+  grid-template-rows: auto auto //25px 120px 25px
+  grid-row-gap: 10px
+
+.mc-in_detail-inner
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+  grid-template-rows: 120px 25px
+  grid-row-gap: 10px
+
+.in_d-file
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-columns: auto auto
+  grid-column-gap: 15px
+
+  justify-content: flex-start
+  align-items: center
+
+.insert_file
+  span
+    font-size: 0.9em
+    text-decoration: underline
+
+.mc-log_in
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+  grid-row-gap: 15px
+
+  margin-top: 10px
+
+.log_in-imgs
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-columns: auto auto auto auto
+  grid-column-gap: 20px
+
+  justify-content: flex-start
+  align-items: center
+
+// leave button
+
+.mc-leave_btn
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-rows: 40px auto
+  grid-row-gap: 10px
+
+  margin-top: 15px
+
+  .content__buy-btn
+    justify-self: stretch
+    align-self: stretch
+    background: white
+
+.agreement
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+
+  grid-template-rows: 15px 15px
+  flex-direction: column
+  justify-content: flex-end
+
+// adaptive
+
+@media screen and (min-width: 768px)
+  .rf-make_comment-wrapper
+    left: 50%
+    width: 100vw
+    transform: translateX(-50%)
+
+  .make-comment
+    justify-content: stretch
+
+    padding: 60px 70px
+    margin: 25px
+
+  .mc-close
+    top: 85px
+    right: 94px
+
+    width: 20px
+    height: 20px
+    img
+      width: 20px
+      height: 20px
+
+  @mixin gtc()
+    grid-template-columns: 165px auto
+    grid-template-rows: auto
+
+  .mc-star_rating
+    @include gtc()
+
+  .mc-two_words
+    grid-template-columns: 165px auto
+    grid-template-rows: 50px
+
+    align-items: center
+
+    textarea, input
+      align-self: stretch !important
+
+  .mc-in_detail
+    @include gtc()
+
+  // second block
+
+  .mc-block-underwrapper
+    grid-template-columns: auto auto
+    grid-column-gap: 10px //make 60
+
+  .mc-log_in
+    grid-template-rows: 25px 25px
+    grid-row-gap: 32px
+
+    margin: 0
+
+  .mc-leave_btn
+    grid-template-columns: 200px auto
+    grid-template-rows: 43px
+    grid-column-gap: 30px
+
+  .agreement
+    small
+      height: 21px
+
+@media screen and (min-width: 1024px)
+  .mc-block-underwrapper
+    grid-column-gap: 60px

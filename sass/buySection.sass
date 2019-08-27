@@ -1,0 +1,168 @@
+.main__buy
+  position: relative
+
+  padding: 0
+
+@media screen and (min-width: 585px)
+  .main__buy
+    height: 574.3px
+
+.buy__grad
+  position: absolute
+  top: 23px
+
+  width: 100%
+  height: 110px
+
+  background: rgb(251,207,189)
+  background: -moz-linear-gradient(180deg, rgba(251,207,189,1) 0%, rgba(251,219,200,1) 50%, rgba(252,238,217,1) 100%)
+  background: -webkit-linear-gradient(180deg, rgba(251,207,189,1) 0%, rgba(251,219,200,1) 50%, rgba(252,238,217,1) 100%)
+  background: linear-gradient(180deg, rgba(251,207,189,1) 0%, rgba(251,219,200,1) 50%, rgba(252,238,217,1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbcfbd",endColorstr="#fceed9",GradientType=1)
+
+.buy__content
+  position: relative
+
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-columns: 2fr 1fr
+  grid-template-rows: 1.3fr 1fr 0.75fr 0.5fr
+
+  width: 86.25vw
+  max-width: 1170px
+
+@media screen and (min-width: 350px)
+  .buy__content
+    width: 88.75vw
+
+.content__rec
+  grid-area: 1 / 1 / 2 / 2
+  align-self: end
+
+.content__pack
+  grid-area: 1 / 2 / 3 / 3
+  justify-self: end
+
+  width: 93px
+  height: 285px
+
+  background: url("../i/mob_pack.png")
+
+.content__about
+  grid-area: 2 / 1 / 3 / 2
+  align-self: center
+
+  font-family: "aglettericacondensedc-bold", sans-serif
+  font-size: 1.7em
+  line-height: 1.2em
+
+  color: #f25f23
+
+.content__improve
+  grid-area: auto / 1 / 4 / 3
+  align-self: center
+
+  font-size: 1.08em
+
+.improve__size
+  display: none
+.improve__value
+  display: none
+
+.content__buy-btn
+  justify-self: start
+  align-self: end
+
+  padding: 4px 30px
+
+  border: 2px solid #f25f23
+  border-radius: 20px
+
+  transition: border-radius linear 0.15s
+
+  &:hover
+    border-radius: 0
+
+/* adaptive for Pad */
+
+@media screen and (min-width: 768px)
+  .main__buy
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: center
+    align-items: center
+
+    background: rgb(251,207,189)
+    background: -moz-linear-gradient(180deg, rgba(251,207,189,1) 0%, rgba(251,219,200,1) 50%, rgba(252,238,217,1) 100%)
+    background: -webkit-linear-gradient(180deg, rgba(251,207,189,1) 0%, rgba(251,219,200,1) 50%, rgba(252,238,217,1) 100%)
+    background: linear-gradient(180deg, rgba(251,207,189,1) 0%, rgba(251,219,200,1) 50%, rgba(252,238,217,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbcfbd",endColorstr="#fceed9",GradientType=1)
+
+  .buy__grad
+    display: none
+
+  .buy__content
+    grid-template-columns: 1.5fr 1fr
+    grid-template-rows: 1fr 0.75fr auto 0
+
+  .content__rec
+    position: absolute
+    visibility: hidden
+
+  .content__pack
+    grid-area: 1 / 2 / 4 / 3
+
+    width: 245px
+    height: 420px
+
+    background: url("../i/pad_pack.png")
+
+  .content__about
+    grid-area: 1 / 1 / 2 / 2
+    align-self: start
+
+    font-size: 3em
+    line-height: 1.5em
+
+  .content__improve
+    grid-area: 2 / 1 / 3 / 2
+    align-self: center
+
+    line-height: 2em
+
+  .improve__size
+    display: inline
+    font-weight: bold
+
+  .improve__value
+    display: inline
+
+/* adaptive for PC */
+
+@media screen and (min-width: 1024px)
+  .main__buy
+    height: 758px
+
+  .buy__content
+    grid-template-rows: 1fr 0.5fr auto 0
+
+  .content__pack
+    width: 364px
+    height: 625px
+
+    background: url("../i/pc_pack.png")
+
+  .content__about
+    font-size: 4em
+
+  @media screen and (min-width: 1093px)
+    .content__about
+      font-size: 5.5em
+
+  .content__improve
+    font-size: 1.45em

@@ -1,0 +1,147 @@
+.footer-line
+  max-width: 970px
+  margin: 0 auto
+  border-top: 3px solid rgba(242,137,73,0.25)
+
+.page__footer-PC
+  display: none
+
+.page__footer
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-rows: auto auto auto auto
+  grid-row-gap: 25px
+
+  max-width: 300px
+
+  margin: 40px 18px
+
+@media screen and (min-width: 585px)
+  .page__footer
+    margin: 40px 36px
+
+.footer__links
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-columns: auto auto
+  grid-column-gap: 40px
+  justify-content: flex-start
+
+.f-links__item
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-rows: 25px 25px 25px
+  grid-row-gap: 5px
+
+  .f-link
+    color: black
+
+.f-link
+  font-size: 0.9em
+  white-space: normal
+
+  &:hover
+    color: #f25f23
+
+.footer__numbers
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+
+  flex-flow: row wrap
+  justify-content: flex-start
+
+.footer__adress
+  .f-link
+    display: -moz-grid
+    display: -ms-grid
+    display: grid
+
+    grid-template-rows: auto auto auto
+
+.footer__evo-lab
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-columns: auto auto
+  grid-column-gap: 50px
+  align-items: center
+
+.f-evo-lab-links
+  display: -moz-grid
+  display: -ms-grid
+  display: grid
+
+  grid-template-rows: auto auto
+
+  .f-link
+    color: #9b9b9b
+    font-weight: normal
+
+@media screen and (min-width: 768px)
+  .page__footer
+    display: none
+
+  .page__footer-PC
+    display: -moz-grid
+    display: -ms-grid
+    display: grid
+
+    grid-template-columns: auto auto auto
+    justify-content: space-between
+
+    max-width: 970px
+
+    margin: 30px 36px 50px
+
+  .footer__evo-lab
+    grid-template-columns: auto
+    grid-template-rows: auto auto
+    align-content: space-between
+
+  .f-logo
+    margin-top: 7px
+
+  .footer__links
+    grid-template-columns: auto
+    grid-row-gap: 20px
+
+  .footer__numbers
+    flex-flow: column nowrap
+    justify-content: space-between
+
+    .f-link:last-child
+      display: -moz-grid
+      display: -ms-grid
+      display: grid
+
+      grid-template-rows: 20px 20px 20px
+
+      padding-top: 10px
+
+@media screen and (min-width: 960px)
+  .page__footer-PC
+    justify-content: flex-start
+
+  .footer__evo-lab
+    margin-right: 85px
+
+  .footer__links
+    margin-right: 187px
+
+@media screen and (min-width: 1024px)
+  .page__footer-PC
+    margin: 30px 50px 50px
+
+@media screen and (min-width: 1070px)
+  .page__footer-PC
+    margin: 30px auto 50px

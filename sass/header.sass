@@ -1,0 +1,220 @@
+.page__header
+  position: fixed
+  top: 0
+  z-index: 4
+
+  width: 100vw
+  height: 84.3px
+
+  background: white
+
+
+.header__inner
+  position: inherit
+  top: 0
+  left: 0
+  right: 0
+  z-index: 4
+
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+
+  -webkit-justify-content: space-between
+  justify-content: space-between
+  -webkit-align-items: center
+  align-items: center
+
+  max-width: 1170px
+
+  padding: 26px 18px
+  margin: 0 auto
+
+  background: white
+
+  .active
+    top: 0
+    z-index: 3
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    height: 100vh
+
+@media screen and (min-width: 585px)
+  .header__inner
+    padding: 26px 36px
+
+.logo
+  position: relative
+  z-index: 4
+
+  width: 64px
+  height: 32.3px
+  img
+    width: 64px
+    height: 32.3px
+
+.header__nav
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: -1
+
+  display: none
+
+  width: 100vw //width: 100vw
+
+  padding: 30% 10% 10%
+
+  background: white
+
+.nav__item
+  position: relative
+  z-index: -1
+
+  display: block
+
+  text-align: center
+  font-size: 1.5em
+
+  padding: 15px 0
+
+  -webkit-transition: color .1s ease
+  -moz-transition: color .1s ease
+  -ms-transition: color .1s ease
+  -o-transition: color .1s ease
+  transition: color .1s ease
+
+  &:after
+    content: attr(data-title)
+
+    position: absolute
+    left: 50%
+
+    font-weight: bold
+
+    opacity: 0
+
+    white-space: nowrap
+
+    -webkit-transform: translateX(-50%)
+    -moz-transform: translateX(-50%)
+    -ms-transform: translateX(-50%)
+    -o-transform: translateX(-50%)
+    transform: translateX(-50%)
+
+    -webkit-transition: color .3s ease, opacity .1s ease
+    -moz-transition: color .3s ease, opacity .1s ease
+    -ms-transition: color .3s ease, opacity .1s ease
+    -o-transition: color .3s ease, opacity .1s ease
+    transition: color .3s ease, opacity .1s ease
+
+@media screen and (min-width: 375px)
+  .nav__item
+    padding: 30px 0
+
+.nav__item_isActive
+  color: transparent
+  &:after
+    color: #f25d1f
+    opacity: 1
+
+.nav-btn
+  position: relative
+  z-index: 3
+
+  display: block
+
+  width: 29px
+  height: 25px
+
+  background: url("../i/nav_btn.png") no-repeat transparent
+  background-size: contain
+
+  border: 0
+
+/* adaptive for PC */
+
+@media screen and (min-width: 1024px)
+  .page__header
+    height: 113px
+
+  .header__inner
+    padding: 26px 100px
+
+  .logo
+    width: auto
+    height: auto
+
+    margin-right: 95px
+    img
+      width: auto
+      height: auto
+
+      transition: width .5s ease
+
+  .header__nav
+    position: static
+
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+
+    -webkit-flex-direction: row
+    -ms-flex-direction: row
+    flex-direction: row
+    justify-content: space-between
+
+    width: 770px
+    height: auto
+
+    padding: 0
+
+  .nav__item
+    font-size: 1em
+
+    padding: 15px 0
+
+    &:before //make all line
+      content: ""
+
+      position: absolute
+      bottom: 4px
+
+      width: 0
+      height: 6px
+
+      background: url("../i/flood3.svg"), rgb(255,255,255)
+      background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.85) 100%), url("../i/flood3.svg")
+      background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.85) 100%), url("../i/flood3.svg")
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.85) 100%), url("../i/flood3.svg")
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1)
+
+      -webkit-transition: width .5s ease
+      -moz-transition: width .5s ease
+      -ms-transition: width .5s ease
+      -o-transition: width .5s ease
+      transition: width .5s ease
+
+    &:hover
+      &:before
+        width: 100%
+
+      &:after
+        color: #f25d1f
+        opacity: 1
+
+      color: transparent
+
+  .nav__item_isActive:before
+    width: 100%
+
+  .nav-btn
+    display: none
